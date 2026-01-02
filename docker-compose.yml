@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   app:
+    user: "${WWWUSER:-1000}:${WWWGROUP:-1000}"
     build:
       context: .
       dockerfile: Dockerfile
